@@ -1,1 +1,32 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG a Pantalla Completa</title>
+    <style>
+        /* Elimina márgenes y rellenos del body */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        /* Hacer que el SVG ocupe toda la pantalla */
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+   
+    <object type="image/svg+xml" data="/Users/alfonsorodriguezderivasalonso/AWD/assets/Fonchitas.svg" width="80%" height="80%"></object>
+</body>
+</html>
