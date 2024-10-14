@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+:root {
+    --primary-color: #000000;  /* Fondo de la navbar negro */
+    --secondary-color: #42A5F5;
+    --accent-color: #FF7043;
+    --background-color: #000000;  /* Fondo de la web negro */
+    --text-color: #FFFFFF;  /* Color de la tipografía blanco */
+    --divider-color: #FFFFFF;  /* Color de la línea divisoria */
+
+    /* Colores hover */
+    --cian-color: #00FFFF;  /* Cian */
+    --magenta-color: #FF00FF;  /* Magenta */
+    --neon-yellow-color: #FFFF00;  /* Amarillo Neón */
+    --neon-green-color: #39FF14;  /* Verde Neón */
+    --neon-blue-color: #1E90FF; /* Azul Neón Intenso */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color); /* Fondo negro */
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);  /* Navbar negra */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Aseguramos que esté por encima del contenido */
+    border-bottom: 2px solid var(--divider-color); /* Línea blanca debajo de la navbar */
+}
+
+/* Logo de la navbar (ALFONSO R. RIVAS) */
+.logo {
+    color: var(--text-color);
+    font-size: 18px; /* Mismo tamaño que los enlaces */
+    font-weight: 300; /* Inter Light */
+    text-transform: uppercase; /* Mayúsculas */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover efecto para el logo "ALFONSO R. RIVAS" */
+.logo:hover {
+    color: var(--neon-blue-color); /* Azul neón intenso */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;  /* Tamaño de la tipografía igual que el logo */
+    text-transform: uppercase;  /* Mayúsculas */
+    font-weight: 300;  /* Inter Light */
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover individual para cada enlace */
+.nav-links .proyectos:hover {
+    color: var(--cian-color);  /* Cian para "Proyectos" */
+}
+
+.nav-links .ilustraciones:hover {
+    color: var(--magenta-color);  /* Magenta para "Ilustraciones" */
+}
+
+.nav-links .info:hover {
+    color: var(--neon-yellow-color);  /* Amarillo Neón para "Info" */
+}
+
+.nav-links .contacto:hover {
+    color: var(--neon-green-color);  /* Verde Neón para "Contact Me" */
+}
+
+/* Menú hamburguesa oculto en desktop */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);  /* Barras blancas */
+    transition: transform 0.3s ease;
+}
+
+/* Checkbox oculto */
+.menu-checkbox {
+    display: none;
+}
+
+/* Cuando el checkbox está marcado, se aplica la clase de "X" a la hamburguesa */
+.menu-checkbox:checked + .menu-toggle .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-checkbox:checked + .menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-checkbox:checked + .menu-toggle .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Estilos para el menú en dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: var(--primary-color);
+        padding: 1rem 0;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Línea blanca fina debajo de la navbar */
+.navbar-divider {
+    height: 2px;
+    background-color: var(--divider-color);
+}
+
+/* Espacio superior para el contenido de la página */
+.homepage-content {
+    padding-top: 80px;  /* Ajustamos el padding para no tapar el contenido con la navbar fija */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+}
+
+/* Imagen centrada y redimensionada que no se corta */
+.homepage-image {
+    width: 100%;
+    max-width: 1200px;  /* Ajusta el ancho máximo según el diseño */
+    height: auto;  /* Mantiene las proporciones de la imagen */
+    object-fit: cover;  /* Asegura que la imagen cubra el área sin cortarse */
+}
+

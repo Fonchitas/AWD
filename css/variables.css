@@ -1,0 +1,7 @@
+:root {
+    --primary-color: #5C6BC0;    /* Un azul pastel suave, ideal para fondos principales */
+    --secondary-color: #42A5F5;  /* Azul más vivo para detalles o botones */
+    --accent-color: #FF7043;     /* Naranja vibrante que complementa el azul, ideal para resaltar elementos */
+    --background-color: #F5F5F5; /* Fondo claro, neutral y limpio */
+    --text-color: #424242;       /* Gris oscuro para texto principal */
+  }
