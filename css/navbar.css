@@ -153,18 +153,38 @@ body {
 
 /* Espacio superior para el contenido de la página */
 .homepage-content {
+    position: relative;
     padding-top: 80px;  /* Ajustamos el padding para no tapar el contenido con la navbar fija */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    width: 100%;
+    overflow: hidden;
 }
 
-/* Imagen centrada y redimensionada que no se corta */
+/* Imagen de fondo que cubre toda la pantalla */
 .homepage-image {
-    width: 100%;
-    max-width: 1200px;  /* Ajusta el ancho máximo según el diseño */
-    height: auto;  /* Mantiene las proporciones de la imagen */
+    width: 100vw;
+    height: 100vh;  /* Ocupa el 100% de la altura de la ventana */
     object-fit: cover;  /* Asegura que la imagen cubra el área sin cortarse */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Detrás del contenido */
+}
+
+/* SVG centrado sobre la imagen */
+.svg-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-svg {
+    width: 200px;  /* Ajusta el tamaño del SVG aquí */
+    height: auto;
 }
 
