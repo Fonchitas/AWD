@@ -95,13 +95,14 @@ body {
     cursor: pointer;
     flex-direction: column;
     gap: 0.3rem;
+    z-index: 1010; /* Aseguramos que esté por encima del fondo */
 }
 
 .menu-toggle .bar {
     width: 25px;
-    height: 3px;
+    height: 2px; /* Cambiado a 2px para líneas más delgadas */
     background-color: var(--text-color);  /* Barras blancas */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Añadir transición para la opacidad */
 }
 
 /* Checkbox oculto */
@@ -115,7 +116,7 @@ body {
 }
 
 .menu-checkbox:checked + .menu-toggle .bar:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* Hace que la barra del medio desaparezca */
 }
 
 .menu-checkbox:checked + .menu-toggle .bar:nth-child(3) {
@@ -129,19 +130,42 @@ body {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 70px;
+        top: 0; /* Ajustado para que llegue a la parte superior de la navbar */
         left: 0;
         background-color: var(--primary-color);
-        padding: 1rem 0;
+        padding: 1rem 0; /* Mantiene el padding vertical */
+        opacity: 0; /* Oculta el menú inicialmente */
+        transform: translateY(-20px); /* Desplazamiento hacia arriba */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
     }
 
     /* Mostrar el menú cuando el checkbox está marcado */
     .menu-checkbox:checked ~ .nav-links {
         display: flex;
+        padding-left: 20px; /* Aumentar la separación del borde izquierdo */
+        opacity: 1; /* Hacer visible el menú */
+        transform: translateY(0); /* Regresar a la posición original */
+        animation: fadeIn 0.3s ease forwards; /* Añadir la animación */
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0; /* Espaciado entre los enlaces */
     }
 
     .menu-toggle {
         display: flex;
+    }
+}
+
+/* Animación para la aparición del menú */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Comienza desde arriba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Llega a su posición original */
     }
 }
 
@@ -181,32 +205,64 @@ body {
     backdrop-filter: blur(15px);  /* Desenfoque adicional */
 }
 
-
+/* Estilos para el SVG responsivo */
 .svg-container {
     position: relative;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+    padding: 0 20px; /* Distancia de los bordes laterales */
 }
 
 .centered-svg {
-    width: 700px;  /* Aumentamos el tamaño del SVG a 500px */
-    height: auto;
-    margin-top: -50px;  /* Desplazamos el SVG hacia arriba */
+    width: 700px; /* Tamaño inicial en escritorio */
+    height: auto; /* Mantiene la proporción */
+    margin-top: -50px; /* Desplazamiento hacia arriba */
 }
 
-
+/* Responsividad del SVG */
+@media (max-width: 768px) {
+    .centered-svg {
+        width: 80%; /* Ajusta el tamaño a un 80% del contenedor en móviles */
+        max-width: 600px; /* Tamaño máximo para móviles */
+        margin-top: 0; /* Eliminar el desplazamiento en móviles */
+    }
+}
 
 /* Video de fondo */
 .homepage-video {
     width: 100vw;  /* Ocupa todo el ancho de la ventana */
     height: 100vh; /* Ocupa todo el alto de la ventana */
     object-fit: cover; /* Asegura que el video cubra el área sin cortarse */
-    position: absolute; /* Posiciona el video detrás del contenido */
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1; /* Detrás del contenido */
 }
- 
 
+/* Degradado sobre el video */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%); /* Degradado de transparente a negro */
+    z-index: 0; /* Encima del video, pero debajo del contenido */
+}
+
+/* Estilos para el contenido de la página */
+.content {
+    position: relative; /* Para posicionar elementos hijos respecto a este contenedor */
+    z-index: 1; /* Asegura que el contenido esté por encima del degradado */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para el fondo negro */
+.scroll-background {
+    height: 200vh; /* Aumentamos la altura para permitir scroll */
+    background-color: var(--background-color); /* Fondo negro */
+}
