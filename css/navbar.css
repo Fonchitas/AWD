@@ -163,7 +163,7 @@ body {
     overflow: hidden;
 }
 
-/* Imagen de fondo que cubre toda la pantalla */
+/* Imagen de fondo con efecto glasmorphism */
 .homepage-image {
     width: 100vw;
     height: 100vh;  /* Ocupa el 100% de la altura de la ventana */
@@ -172,9 +172,16 @@ body {
     top: 0;
     left: 0;
     z-index: -1; /* Detrás del contenido */
+    
+    /* Efecto Glasmorphism */
+    filter: blur(10px);  /* Desenfoque */
+    opacity: 0.85;  /* Transparencia */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);  /* Desenfoque adicional */
 }
 
-/* SVG centrado sobre la imagen */
+
 .svg-container {
     position: relative;
     z-index: 1;
@@ -184,7 +191,22 @@ body {
 }
 
 .centered-svg {
-    width: 200px;  /* Ajusta el tamaño del SVG aquí */
+    width: 700px;  /* Aumentamos el tamaño del SVG a 500px */
     height: auto;
+    margin-top: -50px;  /* Desplazamos el SVG hacia arriba */
 }
+
+
+
+/* Video de fondo */
+.homepage-video {
+    width: 100vw;  /* Ocupa todo el ancho de la ventana */
+    height: 100vh; /* Ocupa todo el alto de la ventana */
+    object-fit: cover; /* Asegura que el video cubra el área sin cortarse */
+    position: absolute; /* Posiciona el video detrás del contenido */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Detrás del contenido */
+}
+ 
 
