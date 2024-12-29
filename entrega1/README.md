@@ -5,7 +5,8 @@ HTML
 CSS
 
 ## Mark up
-
+- Non semantic structure with divs
+- 
 ## Content
 
 ## Style
