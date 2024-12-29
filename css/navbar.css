@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 :root {
-    --primary-color: #000000;  /* Fondo de la navbar negro */
+    --primary-color: #f6f6f6;  /* Fondo de la navbar negro */
     --secondary-color: #42A5F5;
     --accent-color: #FF7043;
-    --background-color: #000000;  /* Fondo de la web negro */
-    --text-color: #FFFFFF;  /* Color de la tipografía blanco */
-    --divider-color: #FFFFFF;  /* Color de la línea divisoria */
+    --background-color: #f6f6f6;  /* Fondo de la web negro */
+    --text-color: #000000;  /* Color de la tipografía blanco */
 
     /* Colores hover */
     --cian-color: #00FFFF;  /* Cian */
     --magenta-color: #FF00FF;  /* Magenta */
-    --neon-yellow-color: #FFFF00;  /* Amarillo Neón */
+    --neon-yellow-color: #6a00ff;  /* Amarillo Neón */
     --neon-green-color: #39FF14;  /* Verde Neón */
     --neon-blue-color: #1E90FF; /* Azul Neón Intenso */
 }
@@ -23,7 +22,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'poppins', sans-serif; 
     background-color: var(--background-color); /* Fondo negro */
     color: var(--text-color);
 }
@@ -45,7 +44,7 @@ body {
 /* Logo de la navbar (ALFONSO R. RIVAS) */
 .logo {
     color: var(--text-color);
-    font-size: 18px; /* Mismo tamaño que los enlaces */
+    font-size: 15px; /* Mismo tamaño que los enlaces */
     font-weight: 300; /* Inter Light */
     text-transform: uppercase; /* Mayúsculas */
     cursor: pointer;
@@ -60,19 +59,21 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 9.7rem;
 }
 
 .nav-links li a {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 18px;  /* Tamaño de la tipografía igual que el logo */
+    font-size: 15px;  /* Tamaño de la tipografía igual que el logo */
     text-transform: uppercase;  /* Mayúsculas */
     font-weight: 300;  /* Inter Light */
     transition: color 0.3s ease;
 }
 
 /* Efecto hover individual para cada enlace */
+
+
 .nav-links .proyectos:hover {
     color: var(--cian-color);  /* Cian para "Proyectos" */
 }
@@ -82,7 +83,7 @@ body {
 }
 
 .nav-links .info:hover {
-    color: var(--neon-yellow-color);  /* Amarillo Neón para "Info" */
+    color: var(--accent-color);  /* Amarillo Neón para "Info" */
 }
 
 .nav-links .contacto:hover {
@@ -138,6 +139,7 @@ body {
         transform: translateY(-20px); /* Desplazamiento hacia arriba */
         transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
     }
+    
 
     /* Mostrar el menú cuando el checkbox está marcado */
     .menu-checkbox:checked ~ .nav-links {
@@ -187,23 +189,6 @@ body {
     overflow: hidden;
 }
 
-/* Imagen de fondo con efecto glasmorphism */
-.homepage-image {
-    width: 100vw;
-    height: 100vh;  /* Ocupa el 100% de la altura de la ventana */
-    object-fit: cover;  /* Asegura que la imagen cubra el área sin cortarse */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Detrás del contenido */
-    
-    /* Efecto Glasmorphism */
-    filter: blur(10px);  /* Desenfoque */
-    opacity: 0.85;  /* Transparencia */
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(15px);  /* Desenfoque adicional */
-}
 
 /* Estilos para el SVG responsivo */
 .svg-container {
@@ -217,27 +202,28 @@ body {
 }
 
 .centered-svg {
-    width: 700px; /* Tamaño inicial en escritorio */
+    width: 1400px; /* Aumentamos el tamaño inicial en escritorio */
     height: auto; /* Mantiene la proporción */
-    margin-top: -50px; /* Desplazamiento hacia arriba */
+    margin-top: 300px; /* Coloca el SVG más abajo (ajusta el valor según lo necesites) */
 }
 
 /* Responsividad del SVG */
 @media (max-width: 768px) {
     .centered-svg {
-        width: 80%; /* Ajusta el tamaño a un 80% del contenedor en móviles */
-        max-width: 600px; /* Tamaño máximo para móviles */
-        margin-top: 0; /* Eliminar el desplazamiento en móviles */
+        width: 90%; /* Ajusta el tamaño a un 90% del contenedor en móviles */
+        max-width: 800px; /* Tamaño máximo para móviles */
+        margin-top: 50px; /* Un poco de espacio arriba en móviles */
+        min-width: 400px;
     }
 }
 
 /* Video de fondo */
 .homepage-video {
     width: 100vw;  /* Ocupa todo el ancho de la ventana */
-    height: 100vh; /* Ocupa todo el alto de la ventana */
+    height: 40vh; /* Ocupa todo el alto de la ventana */
     object-fit: cover; /* Asegura que el video cubra el área sin cortarse */
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 0;
     z-index: -1; /* Detrás del contenido */
 }
@@ -266,4 +252,3 @@ body {
     height: 200vh; /* Aumentamos la altura para permitir scroll */
     background-color: var(--background-color); /* Fondo negro */
 }
- 
