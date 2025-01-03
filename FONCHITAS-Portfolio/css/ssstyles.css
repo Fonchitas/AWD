@@ -173,62 +173,6 @@ body {
     }
 }
 
-/* Línea blanca fina debajo de la navbar */
-.navbar-divider {
-    height: 2px;
-    background-color: var(--divider-color);
-}
-
-/* Espacio superior para el contenido de la página */
-.homepage-content {
-    position: relative;
-    padding-top: 370px; /* Ajustamos el padding para no tapar el contenido con la navbar fija */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para que el contenido se alinee arriba */
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    width: 100%;
-    overflow: hidden;
-}
-
-.path {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
-    padding: 20px; /* Distancia de los bordes laterales */
-    margin-top: -230px; /* Ajusta este valor para mover el SVG más arriba */
-}
-
-/* Estilos para el SVG */
-.svg-container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para evitar centrado vertical */
-    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
-    padding: 20px; /* Distancia de los bordes laterales */
-}
-
-.centered-svg {
-    position: relative; /* Mantén relative para que respete el flujo del contenedor */
-    top: -230px; /* Ajusta este valor según lo necesites */
-    width: 1400px;
-    height: auto;
-}
-
-/* Responsividad del SVG */
-@media (max-width: 768px) {
-    .centered-svg {
-        width: 90%; /* Ajusta el tamaño a un 90% del contenedor en móviles */
-        max-width: 800px; /* Tamaño máximo para móviles */
-        top: -230px; /* Ajusta para móviles */
-        min-width: 400px;
-    }
-}
 
 
 
@@ -245,14 +189,80 @@ body {
 
 
 
-/* Estilos para el contenido de la página */
-.content {
-    position: relative; /* Para posicionar elementos hijos respecto a este contenedor */
-    z-index: 1; /* Asegura que el contenido esté por encima del degradado */
-    padding: 20px;
-    text-align: center;
+
+
+
+.svg-full,
+#F {
+  visibility: hidden;
+  width: 100%;
+}
+
+/* Estilo para pantallas grandes */
+@media screen and (min-width: 1024px) {
+    /* Espacio superior para el contenido de la página */
+.homepage-content {
+    position: relative;
+    padding-top: 370px; /* Ajustamos el padding para no tapar el contenido con la navbar fija */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambiado a flex-start para que el contenido se alinee arriba */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    width: 100%;
+    overflow: hidden;
+}
+
+    /* Estilos para el SVG */
+    .svg-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambiado a flex-start para evitar centrado vertical */
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+    padding: 20px; /* Distancia de los bordes laterales */
+    }
+    .path {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+        padding: 20px; /* Distancia de los bordes laterales */
+        margin-top: -230px; /* Ajusta este valor para mover el SVG más arriba */
+    }
+    .svg-full, #F {
+        
+      visibility: visible;
+    }
+  }
+  
+  /* Estilo para pantallas móviles */
+  @media screen and (max-width: 1023px) {
+    /* Espacio superior para el contenido de la página */
+    .homepage-content {
+        position: relative;
+        padding-top: 100px; /* Ajustamos el padding para no tapar el contenido con la navbar fija */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Cambiado a flex-start para que el contenido se alinee arriba */
+        padding-left: 50px;
+        width: 500%;
+        overflow: hidden;
+        overflow-x: hidden;
+        
+    }
+
+    /* El path #F sigue con visibilidad y tamaño adecuado */
+    #F {
+        visibility: visible;
+        width: 100%;  /* Asegura que #F ocupe todo el ancho */
+        overflow: hidden;
+        overflow-x: hidden;
+    }
 }
 
 
-  
+
   
