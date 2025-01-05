@@ -247,7 +247,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center; /* Centra el SVG verticalmente */
-        padding-right: 150px;
+        padding-right: 110px;
         width: 100%;
         height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
     }
@@ -255,7 +255,7 @@ body {
     /* Ajustes para el SVG */
     #F2 {
         visibility: visible;
-        scale: 4;
+        scale: 5;
         display: block; /* Evita comportamientos inesperados */
         margin: auto; /* Centra el SVG horizontalmente */
     }
