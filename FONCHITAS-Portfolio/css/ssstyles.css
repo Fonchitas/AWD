@@ -268,7 +268,7 @@ body {
     #F2 {
         visibility: visible;
         width: 8000px;
-        padding-right: 20px;
+        padding-right: 70px;
         display: block; /* Evita comportamientos inesperados */
         margin: auto; /* Centra el SVG horizontalmente */
     }
