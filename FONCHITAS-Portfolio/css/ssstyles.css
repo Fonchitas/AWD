@@ -247,7 +247,7 @@ body {
     /* Estilo para la sección de contenido */
     .homepage-content {
         position: relative;
-        padding-top: 200px; /* Evita que la navbar tape el contenido */
+        padding-top: 300px; /* Evita que la navbar tape el contenido */
         display: flex;
         padding-left: 20px;
         justify-content: center;
