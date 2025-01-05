@@ -136,7 +136,7 @@ body {
 }
 
 /* Estilos para el menú en dispositivos móviles */
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -201,7 +201,7 @@ body {
 }
 
 /* Estilo para pantallas grandes */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
     /* Espacio superior para el contenido de la página */
 .homepage-content {
     position: relative;
@@ -243,7 +243,7 @@ body {
   }
   
   /* Estilo para pantallas móviles */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 919px) {
     /* Estilo para la sección de contenido */
     .homepage-content {
         position: absolute;
