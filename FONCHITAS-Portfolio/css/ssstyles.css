@@ -255,7 +255,7 @@ body {
     /* Ajustes para el SVG */
     #F2 {
         visibility: visible;
-        scale: 5;
+        scale: 4.4;
         display: block; /* Evita comportamientos inesperados */
         margin: auto; /* Centra el SVG horizontalmente */
     }
