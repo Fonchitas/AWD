@@ -192,8 +192,7 @@ body {
 
 
 
-.svg-full,
-#F {
+.svg-full, #F2 {
   visibility: hidden;
   width: 100%;
 }
@@ -232,36 +231,37 @@ body {
         padding: 20px; /* Distancia de los bordes laterales */
         margin-top: -230px; /* Ajusta este valor para mover el SVG más arriba */
     }
-    .svg-full, #F {
-        
+    
+    .svg-full {
+
       visibility: visible;
     }
   }
   
   /* Estilo para pantallas móviles */
   @media screen and (max-width: 1023px) {
-    /* Espacio superior para el contenido de la página */
+    /* Estilo para la sección de contenido */
     .homepage-content {
-        position: relative;
-        padding-top: 100px; /* Ajustamos el padding para no tapar el contenido con la navbar fija */
+        position: absolute;
+        padding-top: 2px; /* Evita que la navbar tape el contenido */
         display: flex;
         justify-content: center;
-        align-items: flex-start; /* Cambiado a flex-start para que el contenido se alinee arriba */
-        padding-left: 50px;
-        width: 500%;
-        overflow: hidden;
-        overflow-x: hidden;
-        
+        align-items: center; /* Centra el SVG verticalmente */
+        padding-right: 180px;
+        width: 100%;
+        height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
     }
 
-    /* El path #F sigue con visibilidad y tamaño adecuado */
-    #F {
+    /* Ajustes para el SVG */
+    #F2 {
         visibility: visible;
-        width: 100%;  /* Asegura que #F ocupe todo el ancho */
-        overflow: hidden;
-        overflow-x: hidden;
+        scale: 3;
+        display: block; /* Evita comportamientos inesperados */
+        margin: auto; /* Centra el SVG horizontalmente */
     }
 }
+
+
 
 
 
