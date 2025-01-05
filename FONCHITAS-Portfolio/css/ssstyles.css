@@ -268,8 +268,7 @@ body {
         visibility: visible;
         width: 8500px;
         padding-right: 30px;
-        display: block; /* Evita comportamientos inesperados */
-        margin: auto; /* Centra el SVG horizontalmente */
+        display: flex; /* Evita comportamientos inesperados */
     }
 }
 
