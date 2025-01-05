@@ -184,97 +184,134 @@ body {
         transform: translateY(0); /* Llega a su posición original */
     }
 }
-
-
-
-
-/* Video de fondo */
-.homepage-video {
-    width: 100vw;  /* Ocupa todo el ancho de la ventana */
-    height: 40vh;  /* Ocupa el 40% de la altura de la ventana */
-    object-fit: cover; /* Asegura que el video cubra el área sin cortarse */
-    position: absolute;
-    bottom: 0;  /* Lo coloca en la parte inferior de la ventana */
-    left: 0;
-    z-index: -1; /* Detrás del contenido */
-}
-
-
-
-
-
-
-.svg-full, #F2 {
-  visibility: hidden;
-  width: 100%;
-}
-
-/* Estilo para pantallas grandes */
-@media screen and (min-width: 1024px) {
-    /* Espacio superior para el contenido de la página */
-.homepage-content {
-    position: relative;
-    padding-top: 370px; /* Ajustamos el padding para no tapar el contenido con la navbar fija */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para que el contenido se alinee arriba */
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    width: 100%;
-    overflow: hidden;
-}
-
-    /* Estilos para el SVG */
-    .svg-container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para evitar centrado vertical */
-    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
-    padding: 20px; /* Distancia de los bordes laterales */
-    }
-    .path {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
-        padding: 20px; /* Distancia de los bordes laterales */
-        margin-top: -230px; /* Ajusta este valor para mover el SVG más arriba */
-    }
-    
-    .svg-full {
-
-      visibility: visible;
-    }
+/* Estilo general para la grid */
+.grid-container {
+    display: grid;
+    gap: 2px; /* Espacio pequeño entre imágenes */
+    grid-template-columns: repeat(10, 1fr); /* 10 columnas para pantallas grandes */
+    padding: 0;
   }
   
-  /* Estilo para pantallas móviles */
-  @media screen and (max-width: 1023px) {
-    /* Estilo para la sección de contenido */
-    .homepage-content {
-        position: absolute;
-        padding-top: 2px; /* Evita que la navbar tape el contenido */
-        display: flex;
-        justify-content: center;
-        align-items: center; /* Centra el SVG verticalmente */
-        padding-right: 80px;
-        width: 100%;
-        height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
+  /* Para pantallas grandes (min-width: 1021px) */
+  @media screen and (min-width: 1021px) {
+    .grid-container {
+      grid-template-columns: repeat(10, 1fr); /* 10 columnas */
     }
-
-    /* Ajustes para el SVG */
-    #F2 {
-        visibility: visible;
-        scale: 4;
-        display: block; /* Evita comportamientos inesperados */
-        margin: auto; /* Centra el SVG horizontalmente */
+  
+    /* Las imágenes horizontales ocupan el ancho de 2 columnas */
+    .grid-item.horizontal {
+      grid-column: span 2;
+      height: auto;
     }
-}
+  
+    /* Las imágenes verticales ocupan 1 columna y son un poco más anchas */
+    .grid-item.vertical {
+      grid-column: span 1;
+      height: auto;
+      width: 100%; /* Mantener proporción */
+    }
+  
+    /* Reorganización de la distribución para evitar imágenes solas al final */
+    .grid-item:nth-child(1) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(2) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(3) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(4) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(5) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(6) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(7) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(8) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(9) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(10) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(11) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(12) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(13) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(14) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(15) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(16) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(17) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(18) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(19) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(20) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(21) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(22) { grid-column: span 2; grid-row: span 1; }
+  }
+  
+  /* Para pantallas pequeñas (max-width: 1020px) */
+  @media screen and (max-width: 1020px) {
+    .grid-container {
+      grid-template-columns: repeat(5, 1fr); /* 5 columnas para pantallas más pequeñas */
+    }
+  
+    /* Las imágenes horizontales ocupan 2 columnas */
+    .grid-item.horizontal {
+      grid-column: span 2;
+      height: auto;
+    }
+  
+    /* Las imágenes verticales ocupan 1 columna y se ajustan */
+    .grid-item.vertical {
+      grid-column: span 1;
+      width: 100%;
+    }
+  
+    /* Reorganización para evitar imágenes sueltas */
+    .grid-item:nth-child(1) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(2) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(3) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(4) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(5) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(6) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(7) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(8) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(9) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(10) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(11) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(12) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(13) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(14) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(15) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(16) { grid-column: span 2; grid-row: span 1; }
+    .grid-item:nth-child(17) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(18) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(19) { grid-column: span 1; grid-row: span 1; }
+    .grid-item:nth-child(20) { grid-column: span 2; grid-row: span 1; }
 
-
-
-
-
+  }
+  
+  /* Para pantallas muy pequeñas (móviles) */
+  @media screen and (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas muy pequeñas */
+    }
+  
+    .grid-item.horizontal {
+      grid-column: span 2; /* Ocupa 2 columnas */
+      height: auto; /* Se ajusta para mantener las proporciones */
+    }
+  
+    .grid-item.vertical {
+      grid-column: span 1;
+      width: 100%; /* Las hago un poco más anchas para balancear */
+    }
+  
+    /* Reorganización para móviles */
+    .grid-item:nth-child(1) { grid-column: span 2; }
+    .grid-item:nth-child(2) { grid-column: span 1; }
+    .grid-item:nth-child(3) { grid-column: span 1; }
+    .grid-item:nth-child(4) { grid-column: span 2; }
+    .grid-item:nth-child(5) { grid-column: span 2; }
+    .grid-item:nth-child(6) { grid-column: span 1; }
+    .grid-item:nth-child(7) { grid-column: span 1; }
+    .grid-item:nth-child(8) { grid-column: span 2; }
+    .grid-item:nth-child(9) { grid-column: span 1; }
+    .grid-item:nth-child(10) { grid-column: span 2; }
+  }
+  
+  /* Estilo para las imágenes */
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
   
