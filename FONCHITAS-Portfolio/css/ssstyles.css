@@ -259,6 +259,7 @@ body {
     /* Ajustes para el SVG */
     #F2 {
         visibility: visible;
+        padding-top: 50px ; ;
         width: 9000px;
         padding-right: 30px;
         display: flex; 
