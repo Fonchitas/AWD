@@ -50,6 +50,12 @@ body {
     cursor: pointer;
     transition: color 0.3s ease;
 }
+
+/* Hover efecto para el logo "ALFONSO R. RIVAS" */
+.logo:hover {
+    color: var(--neon-blue-color); /* Azul neón intenso */
+}
+
 /* Eliminar punto del Logo de la navbar (ALFONSO R. RIVAS) */
 .logo {
     list-style: none; /* Elimina el punto de la lista */
@@ -61,11 +67,6 @@ body {
     text-decoration: none; /* Opcional: elimina el subrayado del enlace */
     color: inherit; /* Usa el color de texto definido para el contenedor */
   }
-  
-/* Hover efecto para el logo "ALFONSO R. RIVAS" */
-.logo:hover {
-    color: var(--neon-blue-color); /* Azul neón intenso */
-}
 
 .nav-links {
     list-style: none;
@@ -187,8 +188,16 @@ body {
 
 
 
-
-
+/* Video de fondo */
+.homepage-video {
+    width: 100vw;  /* Ocupa todo el ancho de la ventana */
+    height: 40vh;  /* Ocupa el 40% de la altura de la ventana */
+    object-fit: cover; /* Asegura que el video cubra el área sin cortarse */
+    position: absolute;
+    bottom: 0;  /* Lo coloca en la parte inferior de la ventana */
+    left: 0;
+    z-index: -1; /* Detrás del contenido */
+}
 
 
 
