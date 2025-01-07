@@ -306,8 +306,7 @@ body {
     .grid-item:nth-child(8) { grid-column: span 2; }
     .grid-item:nth-child(9) { grid-column: span 1; }
     .grid-item:nth-child(10) { grid-column: span 2; }
-    .grid-item:nth-child(11) { grid-column: span 1; }
-    .grid-item:nth-child(12) { grid-column: span 1; }
+
   }
   
   /* Estilo para las imágenes */
@@ -330,7 +329,7 @@ body {
   /* Estilo para pantallas pequeñas (max-width: 767px) */
   @media (max-width: 767px) {
     .LCAsvg {
-      width: 100px; /* Reduce el tamaño del SVG para pantallas pequeñas */
+      width: 90px; /* Reduce el tamaño del SVG para pantallas pequeñas */
     }
   }
   
