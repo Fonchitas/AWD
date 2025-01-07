@@ -330,7 +330,7 @@ body {
   @media (max-width: 767px) {
     .LCAsvg {
       width: 90px; /* Reduce el tamaño del SVG para pantallas pequeñas */
-      margin-top: 80px;
+      
     }
   }
   
