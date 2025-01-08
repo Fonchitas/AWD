@@ -184,13 +184,216 @@ body {
         transform: translateY(0); /* Llega a su posición original */
     }
 }
+
+
+
+
+
+/* Estilo base para el SVG */
+.LCAsvg {
+    width: auto; /* Ancho predeterminado */
+    height: auto; /* Altura proporcional al ancho */
+    max-width: 100%; /* Asegura que no exceda el tamaño del contenedor */
+    display: block; /* Quita los espacios alrededor del SVG si es inline */
+    margin: 0 auto; /* Centra el SVG horizontalmente */
+    margin-top: 100px;
+  }
+  
+  /* Estilo para pantallas pequeñas (max-width: 767px) */
+  @media (max-width: 767px) {
+    .LCAsvg {
+      width: 90px; /* Reduce el tamaño del SVG para pantallas pequeñas */
+      
+    }
+  }
+  
+  /* Estilo para pantallas medianas (768px - 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .LCAsvg {
+      width: 150px; /* Ajusta el tamaño para pantallas medianas */
+    }
+  }
+  
+  /* Estilo para pantallas grandes (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    .LCAsvg {
+      width: 150px; /* Aumenta el tamaño para pantallas grandes */
+    }
+  }
+  
+/* Estilo para pantallas grandes (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .text-left2 p {
+        font-size: 193.5px; /* Tamaño reducido de la letra */
+        
+        margin-top: 140px; /* Aumenta el margen superior */
+        
+        text-align: center;
+      }
+  }
+
+  .text-left p {
+    font-size: 8px; /* Tamaño reducido de la letra */
+    margin-top: 40px; /* Aumenta el margen superior */
+    line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
+    text-align: center;
+    padding: 18px;
+
+}
+
+  @media (min-width: 768px) {
+  .text-left p {
+    font-size: 12px; /* Tamaño reducido de la letra */
+    margin-top: 40px; /* Aumenta el margen superior */
+    line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
+    text-align: center;
+  }
+}
+
+ /* Estilo para pantallas pequeñas (max-width: 767px) */
+ @media (max-width: 767px) {
+    .text-left2 p {
+
+        font-size: 64.5px; /* Tamaño reducido de la letra */
+        
+        margin-top: 80px; /* Aumenta el margen superior */
+        
+        text-align: center;
+      }
+  }
+  
+  /* Estilo para pantallas medianas (768px - 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .text-left2 p {
+        font-size: 98px; /* Tamaño reducido de la letra */
+        
+        margin-top: 70px; /* Aumenta el margen superior */
+        
+        text-align: center;
+      }
+  }
+  
+  /* Estilo para pantallas grandes (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    .text-left2 p {
+        font-size: 193.5px; /* Tamaño reducido de la letra */
+        
+        margin-top: 140px; /* Aumenta el margen superior */
+        
+        text-align: center;
+      }
+  }
+/* Estilo para pantallas pequeñas (max-width: 767px) */
+@media (max-width: 767px) {
+    .text-left4 p {
+
+        font-size: 64.5px; /* Tamaño reducido de la letra */
+        
+        margin-top: 80px; /* Aumenta el margen superior */
+        
+        text-align: center;
+      }
+  }
+  
+  /* Estilo para pantallas medianas (768px - 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .text-left4 p {
+        font-size: 98px; /* Tamaño reducido de la letra */
+        
+        margin-top: 70px; /* Aumenta el margen superior */
+        
+        text-align: center;
+      }
+  }
+  
+  /* Estilo para pantallas grandes (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    .text-left4 p {
+        font-size: 193.5px; /* Tamaño reducido de la letra */
+        
+        margin-top: 140px; /* Aumenta el margen superior */
+        
+        text-align: center;
+      }
+  }
+
+  .text-left3 p {
+    font-size: 12px; /* Tamaño reducido de la letra */
+    margin-top: -80px; /* Aumenta el margen superior */
+    line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
+    text-align: center;
+    padding: 40px;
+  }
+  @media (max-width: 767px) {
+    .text-left3 p {
+        font-size: 8px; /* Tamaño reducido de la letra */
+        margin-top: -30px; /* Aumenta el margen superior */
+        line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
+        text-align: center;
+        padding: 22px;
+      }
+
+  }
+  .text-left5 p {
+    font-size: 12px; /* Tamaño reducido de la letra */
+    margin-top: -80px; /* Aumenta el margen superior */
+    line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
+    text-align: center;
+    padding: 40px;
+  }
+
+@media (max-width: 767px) {
+    .text-left5 p {
+        font-size: 8px; /* Tamaño reducido de la letra */
+        margin-top: -30px; /* Aumenta el margen superior */
+        line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
+        text-align: center;
+        padding: 22px;
+      }
+    }
+
+
+
+.LCA-presentación {
+    margin-top: 172px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 6 fracciones para más control */
+    gap: 2px; /* Espaciado entre imágenes */
+    width: 100%; /* Asegura que ocupa todo el ancho */
+  }
+  
+  .fina {
+    grid-column: span 1; /* Cada vertical ocupa 1/6 del contenedor */
+    aspect-ratio: 1; /* Vertical 1:2 */
+    object-fit: cover; /* Mantén proporciones sin deformar */
+    width: 100%;
+  }
+  
+  .ancha {
+    grid-column: span 2; /* Horizontal ocupa 2/6 del contenedor */
+    aspect-ratio: 2 / 1; /* Horizontal 2:1 */
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  /* Ajuste responsivo */
+  @media (max-width: 768px) {
+    .LCA-presentación {
+        margin-top: 50px;
+      grid-template-columns: repeat(3, 1fr); /* Ajusta las columnas en móviles */
+    }
+  }
+  
+
+
+
 /* Estilo general para la grid */
 .grid-container {
     display: grid;
     gap: 2px; /* Espacio pequeño entre imágenes */
     grid-template-columns: repeat(10, 1fr); /* 10 columnas para pantallas grandes */
     padding: 0;
-    margin-top: 70px;
+    margin-top: 160px;
   }
   
   /* Para pantallas grandes (min-width: 1021px) */
@@ -240,6 +443,7 @@ body {
   /* Para pantallas pequeñas (max-width: 1020px) */
   @media screen and (max-width: 1020px) {
     .grid-container {
+        margin-top: 70px;
       grid-template-columns: repeat(5, 1fr); /* 5 columnas para pantallas más pequeñas */
     }
   
@@ -315,54 +519,3 @@ body {
     height: 100%;
     object-fit: cover;
   }
-  
- /* Estilo base para el SVG */
-.LCAsvg {
-    width: auto; /* Ancho predeterminado */
-    height: auto; /* Altura proporcional al ancho */
-    max-width: 100%; /* Asegura que no exceda el tamaño del contenedor */
-    display: block; /* Quita los espacios alrededor del SVG si es inline */
-    margin: 0 auto; /* Centra el SVG horizontalmente */
-    margin-top: 80px;
-  }
-  
-  /* Estilo para pantallas pequeñas (max-width: 767px) */
-  @media (max-width: 767px) {
-    .LCAsvg {
-      width: 90px; /* Reduce el tamaño del SVG para pantallas pequeñas */
-      
-    }
-  }
-  
-  /* Estilo para pantallas medianas (768px - 1023px) */
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .LCAsvg {
-      width: 150px; /* Ajusta el tamaño para pantallas medianas */
-    }
-  }
-  
-  /* Estilo para pantallas grandes (min-width: 1024px) */
-  @media (min-width: 1024px) {
-    .LCAsvg {
-      width: 150px; /* Aumenta el tamaño para pantallas grandes */
-    }
-  }
-  @media (min-width: 768px) {
-  .text-left p {
-    font-size: 12px; /* Tamaño reducido de la letra */
-    margin-top: 20px; /* Aumenta el margen superior */
-    line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-    text-align: center;
-  }
-}
-@media (max-width: 767px) {
-    .text-left p {
-        font-size: 8px; /* Tamaño reducido de la letra */
-        margin-top: 20px; /* Aumenta el margen superior */
-        line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-        text-align: center;
-      }
-
-
-
-}
