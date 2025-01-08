@@ -387,6 +387,73 @@ body {
 
 
 
+  
+  .three, .two, .total {
+    visibility: hidden;
+  }
+  @media (min-width: 768px){
+  .three {
+    
+    object-fit: cover; /* Mantén proporciones sin deformar */
+    width: 100%;
+    visibility: hidden;
+  }
+  .two {
+    
+    object-fit: cover; /* Mantén proporciones sin deformar */
+    width: 100%;
+    visibility: hidden;
+  }
+
+  }
+  @media (max-width: 767px) {
+  .two {
+    margin-top: -40px;
+    object-fit: cover; /* Mantén proporciones sin deformar */
+    width: 100%;
+    padding: 60px;
+    visibility: visible;
+  }
+  .three {
+   margin-top: -120px;
+    object-fit: cover; /* Mantén proporciones sin deformar */
+    width: 100%;
+    visibility: visible;
+  }
+
+}
+
+@media (max-width: 767px) {
+    .total {
+        
+        object-fit: cover;
+        width: 100%;
+        visibility: hidden;
+      }
+    }
+
+
+  @media (min-width: 768px){
+  .total {
+    margin-top: 120px;
+    object-fit: cover;
+    width: 100%;
+    visibility: visible;
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
 /* Estilo general para la grid */
 .grid-container {
     display: grid;
