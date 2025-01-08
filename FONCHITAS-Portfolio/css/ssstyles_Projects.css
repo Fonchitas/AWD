@@ -254,7 +254,7 @@ body {
  @media (max-width: 767px) {
     .text-left2 p {
 
-        font-size: 64.5px; /* Tamaño reducido de la letra */
+        font-size: 55px; /* Tamaño reducido de la letra */
         
         margin-top: 80px; /* Aumenta el margen superior */
         
