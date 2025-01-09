@@ -247,13 +247,13 @@ header p {
 }
 
 .contact-details a {
-    color: #007BFF;
+    color: #d022c7;
     text-decoration: none;
     font-weight: 500;
 }
 
 .contact-details a:hover {
-    color: #0056b3;
+    color: #ff00ff;
 }
 
 .links {
