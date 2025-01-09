@@ -51,6 +51,11 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Hover efecto para el logo "ALFONSO R. RIVAS" */
+.logo:hover {
+    color: var(--neon-blue-color); /* Azul neón intenso */
+}
+
 /* Eliminar punto del Logo de la navbar (ALFONSO R. RIVAS) */
 .logo {
     list-style: none; /* Elimina el punto de la lista */
@@ -62,12 +67,6 @@ body {
     text-decoration: none; /* Opcional: elimina el subrayado del enlace */
     color: inherit; /* Usa el color de texto definido para el contenedor */
   }
-
-
-/* Hover efecto para el logo "ALFONSO R. RIVAS" */
-.logo:hover {
-    color: var(--neon-blue-color); /* Azul neón intenso */
-}
 
 .nav-links {
     list-style: none;
@@ -186,96 +185,62 @@ body {
     }
 }
 
-
-
-
-/* Video de fondo */
-.homepage-video {
-    width: 100vw;  /* Ocupa todo el ancho de la ventana */
-    height: 40vh;  /* Ocupa el 40% de la altura de la ventana */
-    object-fit: cover; /* Asegura que el video cubra el área sin cortarse */
-    position: absolute;
-    bottom: 0;  /* Lo coloca en la parte inferior de la ventana */
-    left: 0;
-    z-index: -1; /* Detrás del contenido */
-}
-
-
-
-
-
-
-.svg-full, #F2 {
-  visibility: hidden;
-  width: 100%;
-}
-
-/* Estilo para pantallas grandes */
-@media screen and (min-width: 1024px) {
-    /* Espacio superior para el contenido de la página */
-.homepage-content {
-    position: relative;
-    padding-top: 370px; /* Ajustamos el padding para no tapar el contenido con la navbar fija */
+/* Contenedor principal */
+.image-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para que el contenido se alinee arriba */
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    width: 100%;
-    overflow: hidden;
-}
-
-    /* Estilos para el SVG */
-    .svg-container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para evitar centrado vertical */
-    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
-    padding: 20px; /* Distancia de los bordes laterales */
-    }
-    .path {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
-        padding: 20px; /* Distancia de los bordes laterales */
-        margin-top: -230px; /* Ajusta este valor para mover el SVG más arriba */
-    }
-    
-    .svg-full {
-
-      visibility: visible;
-    }
+    justify-content: center; /* Centra todas las imágenes */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que las imágenes pasen a nuevas filas en pantallas pequeñas */
+    gap: 20px; /* Espacio entre imágenes */
+    max-width: 800px; /* Limita el ancho total del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px;
+    box-sizing: border-box;
   }
   
-  /* Estilo para pantallas móviles */
-  @media screen and (max-width: 1023px) {
-    /* Estilo para la sección de contenido */
-    .homepage-content {
-        position: absolute;
-        padding-top: 2px; /* Evita que la navbar tape el contenido */
-        display: flex;
-        justify-content: center;
-        align-items: center; /* Centra el SVG verticalmente */
-        padding-right: 80px;
-        width: 100%;
-        height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
-    }
-
-    /* Ajustes para el SVG */
-    #F2 {
-        visibility: visible;
-        scale: 4;
-        display: block; /* Evita comportamientos inesperados */
-        margin: auto; /* Centra el SVG horizontalmente */
-    }
+ /* Contenedor principal */
+.image-container2 {
+  display: flex;
+  justify-content: center; /* Centra el conjunto de imágenes horizontalmente */
+  align-items: flex-start;
+  flex-wrap: wrap; /* Permite que las imágenes pasen a nuevas filas en pantallas pequeñas */
+  gap: 20px; /* Espacio entre imágenes */
+  max-width: 100%; /* Se ajusta al ancho disponible */
+  padding: 20px;
+  margin: 0 auto; /* Centra el contenedor dentro de la página */
+  box-sizing: border-box;
 }
 
+/* Cada elemento */
+.image-item {
+    margin-top: 90px;
+  text-align: center;
+  max-width: 400px; /* Limita el tamaño máximo de cada imagen */
+  flex: 1 1 200px; /* Cada imagen ocupa al menos 200px */
+}
 
+/* Imágenes */
+.responsive-img {
+  width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 12px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
 
+/* Texto debajo */
+.image-item p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px; /* Tamaño de texto pequeño */
+  color: #333;
+  margin-top: 8px;
+}
 
+/* Responsivo */
+@media (max-width: 768px) {
+  .image-item {
+    max-width: 150px; /* Reduce el tamaño en pantallas pequeñas */
+  }
+}
 
+  
   
