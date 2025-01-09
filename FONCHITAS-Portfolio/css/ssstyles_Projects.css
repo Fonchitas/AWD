@@ -581,142 +581,99 @@ body {
   }
 
   
-/* Estilo base para el SVG */
+/* SVG Responsiveness */
 .INFLUENCIASsvg {
-    width: auto; /* Ancho predeterminado */
-    height: auto; /* Altura proporcional al ancho */
-    max-width: 100%; /* Asegura que no exceda el tamaño del contenedor */
-    display: block; /* Quita los espacios alrededor del SVG si es inline */
-    margin: 0 auto; /* Centra el SVG horizontalmente */
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Ensures it scales within the container */
+    display: block;
+    margin: 0 auto;
     margin-top: 100px;
-  }
-  
-  /* Estilo para pantallas pequeñas (max-width: 767px) */
-  @media (max-width: 767px) {
-    .INFLUENCIASsvg {
-      width: 90px; /* Reduce el tamaño del SVG para pantallas pequeñas */
-      
-    }
-  }
-  
-  /* Estilo para pantallas medianas (768px - 1023px) */
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .INFLUENCIASsvg {
-      width: 150px; /* Ajusta el tamaño para pantallas medianas */
-    }
-  }
-  
-  /* Estilo para pantallas grandes (min-width: 1024px) */
-  @media (min-width: 1024px) {
-    .INFLUENCIASsvg {
-      width: 150px; /* Aumenta el tamaño para pantallas grandes */
-    }
-  }
-
-  .text-left6 p {
-    font-size: 194px; /* Tamaño reducido de la letra */
-    margin-top: 80px; /* Aumenta el margen superior */
-    line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-    text-align: center;
-    padding: 40px;
-  }
+}
 
 @media (max-width: 767px) {
-    .text-left6 p {
-        font-size: 50px; /* Tamaño reducido de la letra */
-        margin-top: -30px; /* Aumenta el margen superior */
-        line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-        text-align: center;
-        padding: 22px;
-      }
+    .INFLUENCIASsvg {
+        width: 90px;
     }
+}
 
-    .text-left7 p {
-        font-size: 12px; /* Tamaño reducido de la letra */
-        margin-top: -80px; /* Aumenta el margen superior */
-        line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-        text-align: center;
-        padding: 40px;
-      }
-    
-      @media (max-width: 767px) {
-        .text-left7 p {
-            font-size: 8px; /* Tamaño reducido de la letra */
-            margin-top: -70px; /* Aumenta el margen superior */
-            line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-            text-align: center;
-            padding: 22px;
-          }
-    
-      }
+@media (min-width: 768px) and (max-width: 1023px) {
+    .INFLUENCIASsvg {
+        width: 150px;
+    }
+}
 
-  .INFLUENCIASimagen1 {
+@media (min-width: 1024px) {
+    .INFLUENCIASsvg {
+        width: 150px;
+    }
+}
+
+/* Text Styling and Responsiveness */
+.text-left6 p, .text-left8 p {
+    font-size: 194px;
+    margin-top: 80px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 40px;
+}
+
+@media (max-width: 767px) {
+    .text-left6 p, .text-left8 p {
+        font-size: 50px;
+        margin-top: -30px;
+        padding: 22px;
+    }
+}
+
+.text-left7 p, .text-left9 p {
+    font-size: 12px;
+    margin-top: -80px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 40px;
+}
+
+@media (max-width: 767px) {
+    .text-left7 p, .text-left9 p {
+        font-size: 8px;
+        margin-top: -70px;
+        padding: 22px;
+    }
+}
+
+/* Image Responsiveness */
+.INFLUENCIASimagen1, .INFLUENCIASimagen2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.total2, .total3 {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+}
+
+@media (max-width: 767px) {
+    .total2, .total3 {
+        max-width: 80%; /* Adjusts size for smaller screens */
+    }
+}
+
+/* Margins for Images */
+.INFLUENCIASimagen1 {
     margin-bottom: -50px;
-    display: flex; /* Usamos flexbox */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-  }
-  
-  .total2 {
-    max-width: 50%; /* Ajusta el tamaño máximo de la imagen al 50% del ancho de la pantalla */
-    height: auto; /* Mantén la proporción de la imagen */
-    display: block; /* Asegura un correcto comportamiento de la imagen */
-    border-radius: 10px; /* Redondea ligeramente las esquinas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* (Opcional) Sombra sutil para destacarla */
-  }
-  .total3 {
-    max-width: 50%; /* Ajusta el tamaño máximo de la imagen al 50% del ancho de la pantalla */
-    height: auto; /* Mantén la proporción de la imagen */
-    display: block; /* Asegura un correcto comportamiento de la imagen */
-    
-  }
+}
 
-  .INFLUENCIASimagen2 {
+.INFLUENCIASimagen2 {
     margin-top: -60px;
     margin-bottom: -150px;
-    display: flex; /* Usamos flexbox */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-  }
+}
 
-  .text-left8 p {
-    font-size: 194px; /* Tamaño reducido de la letra */
-    margin-top: -40px; /* Aumenta el margen superior */
-    line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-    text-align: center;
-    padding: 40px;
-  }
-
-@media (max-width: 767px) {
-    .text-left8 p {
-        font-size: 50px; /* Tamaño reducido de la letra */
-        margin-top: -30px; /* Aumenta el margen superior */
-        line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-        text-align: center;
-        padding: 22px;
-      }
-    }
-
-    .text-left9 p {
-        font-size: 12px; /* Tamaño reducido de la letra */
-        margin-top: -80px; /* Aumenta el margen superior */
-        line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-        text-align: center;
-        padding: 40px;
-      }
-    
-      @media (max-width: 767px) {
-        .text-left9 p {
-            font-size: 8px; /* Tamaño reducido de la letra */
-            margin-top: -70px; /* Aumenta el margen superior */
-            line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
-            text-align: center;
-            padding: 22px;
-          }
-    
-      }
 
 /* General styles for fade-in animation */
 @keyframes fadeIn {

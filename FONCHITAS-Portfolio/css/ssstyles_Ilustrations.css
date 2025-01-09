@@ -255,11 +255,12 @@ body {
 
   @media (max-width: 767px) {
     .text-left2 p {
-        font-size: 80px; /* Tamaño reducido de la letra */
-        margin-top: -30px; /* Aumenta el margen superior */
+        font-size: 50px; /* Tamaño reducido de la letra */
+        margin-top: 20px; /* Aumenta el margen superior */
         line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
         text-align: center;
         padding: 22px;
+        margin-bottom: 20px;
       }
 
   }
