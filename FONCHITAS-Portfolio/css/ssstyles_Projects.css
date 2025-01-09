@@ -221,8 +221,8 @@ body {
     }
   }
   
-/* Estilo para pantallas grandes (min-width: 1024px) */
-@media (min-width: 1024px) {
+  /* Estilo para pantallas grandes (min-width: 1024px) */
+  @media (min-width: 1024px) {
     .text-left2 p {
         font-size: 193.5px; /* Tamaño reducido de la letra */
         
@@ -239,7 +239,7 @@ body {
     text-align: center;
     padding: 18px;
 
-}
+    }
 
   @media (min-width: 768px) {
   .text-left p {
@@ -250,8 +250,8 @@ body {
   }
 }
 
- /* Estilo para pantallas pequeñas (max-width: 767px) */
- @media (max-width: 767px) {
+  /* Estilo para pantallas pequeñas (max-width: 767px) */
+  @media (max-width: 767px) {
     .text-left2 p {
 
         font-size: 50px; /* Tamaño reducido de la letra */
@@ -283,8 +283,9 @@ body {
         text-align: center;
       }
   }
-/* Estilo para pantallas pequeñas (max-width: 767px) */
-@media (max-width: 767px) {
+
+  /* Estilo para pantallas pequeñas (max-width: 767px) */
+  @media (max-width: 767px) {
     .text-left4 p {
 
         font-size: 50px; /* Tamaño reducido de la letra */
@@ -324,6 +325,7 @@ body {
     text-align: center;
     padding: 40px;
   }
+
   @media (max-width: 767px) {
     .text-left3 p {
         font-size: 8px; /* Tamaño reducido de la letra */
@@ -334,6 +336,7 @@ body {
       }
 
   }
+
   .text-left5 p {
     font-size: 12px; /* Tamaño reducido de la letra */
     margin-top: -80px; /* Aumenta el margen superior */
@@ -351,8 +354,6 @@ body {
         padding: 22px;
       }
     }
-
-
 
 .LCA-presentación {
     margin-top: 172px;
@@ -384,13 +385,10 @@ body {
     }
   }
   
-
-
-
-  
   .three, .two, .total {
     visibility: hidden;
   }
+
   @media (min-width: 768px){
   .three {
     
@@ -398,6 +396,7 @@ body {
     width: 100%;
     visibility: hidden;
   }
+
   .two {
     
     object-fit: cover; /* Mantén proporciones sin deformar */
@@ -406,6 +405,7 @@ body {
   }
 
   }
+
   @media (max-width: 767px) {
   .two {
     margin-top: -40px;
@@ -441,15 +441,6 @@ body {
     visibility: visible;
   }
 }
-  
-
-
-
-
-
-
-
-
 
 
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f8f8;
+    }
+
+    .color-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .color-box {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .color-name {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Color Palette</h1>
+  <div class="color-container">
+    <!-- Add color swatches here -->
+    <div class="color-box" style="background-color: #1A1A1A;">
+      <span>#1A1A1A</span>
+      <div class="color-name">Primary Black</div>
+    </div>
+    <div class="color-box" style="background-color: #FFFFFF; color: #000;">
+      <span>#FFFFFF</span>
+      <div class="color-name">Pure White</div>
+    </div>
+    <div class="color-box" style="background-color: #007BFF;">
+      <span>#007BFF</span>
+      <div class="color-name">Accent Blue</div>
+    </div>
+    <div class="color-box" style="background-color: #F4F4F4; color: #000;">
+      <span>#F4F4F4</span>
+      <div class="color-name">Light Gray</div>
+    </div>
+  </div>
+</body>
+</html>
+
