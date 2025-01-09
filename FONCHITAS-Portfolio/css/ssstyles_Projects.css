@@ -238,7 +238,6 @@ body {
     line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
     text-align: center;
     padding: 18px;
-
     }
 
   @media (min-width: 768px) {
