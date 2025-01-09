@@ -213,9 +213,9 @@ body {
 
 /* Cada elemento */
 .image-item {
-    margin-top: 90px;
+    margin-top: 0PX;
   text-align: center;
-  max-width: 400px; /* Limita el tamaño máximo de cada imagen */
+  max-width: 377px; /* Limita el tamaño máximo de cada imagen */
   flex: 1 1 200px; /* Cada imagen ocupa al menos 200px */
 }
 
@@ -243,4 +243,23 @@ body {
 }
 
   
-  
+.text-left2 p {
+    font-size: 175px; /* Tamaño reducido de la letra */
+    margin-top: -50px; /* Aumenta el margen superior */
+    line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
+    text-align: center;
+    padding: 40px;
+    margin-bottom: -100px;
+   
+  }
+
+  @media (max-width: 767px) {
+    .text-left2 p {
+        font-size: 80px; /* Tamaño reducido de la letra */
+        margin-top: -30px; /* Aumenta el margen superior */
+        line-height: 1.6; /* Opcional: Mejora la legibilidad del texto */
+        text-align: center;
+        padding: 22px;
+      }
+
+  }
