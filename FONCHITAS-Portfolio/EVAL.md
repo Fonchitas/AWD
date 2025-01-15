@@ -13,4 +13,5 @@
 - Avoid spaces in file names; use always lowercase
 - Graphicdesigner link broken
 - check double js directory nested tree
+- Missing custom 404
 - Congratulations on your work!
