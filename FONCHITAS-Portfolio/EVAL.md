@@ -6,9 +6,11 @@
 ## Comments
 - First grade svg personal logo animation
 - Excellent photo grid 
-- parragraphs unstilished 
-- Ordered repository
+- paragraphs unstilished 
+- Ordered repository with issues
 - Check .html.html double extensions
 - git ignore .DS_Store
 - Avoid spaces in file names; use always lowercase
-- 
+- Graphicdesigner link broken
+- check double js directory nested tree
+- Congratulations on your work!
